@@ -133,7 +133,12 @@ select {
     padding-right: 30px; /* add space so text doesn't overlap arrow */
 }
 
-
+/* error message styles */
+.error-message{
+  font-size: 12px;
+  color: red;
+  padding: 4px 0 8px 0;
+}
 
 /* Submit button */
 button {
