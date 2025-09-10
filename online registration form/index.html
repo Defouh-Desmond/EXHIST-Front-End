@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <header>Registration Form</header>
+        <form action="#">
+            <div class="input-box">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="input-box">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="input-box">
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="input-box">
+                <label for="birthdate">Birth Date</label>
+                <input type="date" id="birthdate" required placeholder="Enter your birth date">
+            </div>
+
+            <div class="gender-box">
+                <h3>gender</h3>
+                <div class="gender-option">
+                    <div class="gender">
+                        <input type="radio" name="gender" id="male" value="male">
+                        <label for="male">Male</label>
+                    </div>
+                    <div class="gender">
+                        <input type="radio" name="gender" id="female" value="female">
+                        <label for="female">Female</label>
+                    </div>
+                    <div class="gender">
+                        <input type="radio" name="gender" id="other" value="other">
+                        <label for="other">Prefer not to say</label>
+                    </div>
+                </div>
+            </div>
+            <div class="input-box address">
+                <input type="text" placeholder="Enter street address" required>
+                <input type="text" placeholder="Enter street address line 2" required>
+                <div class="column">
+                    <div class="select-box">
+                        <select>
+                            <option>Country</option>
+                            <option>America</option>
+                            <option>Australia</option>
+                            <option>Bangladesh</option>
+                            <option>Canada</option>
+                            <option>Cameroon</option>
+                            <option>Brazil</option>
+                            <option>China</option>
+                            <option>Colombia</option>
+                            <option>India</option>
+                            <option>Japan</option>
+                            <option>Kenya</option>
+                            <option>Lesotho</option>
+                            <option>Nepal</option>
+                            <option>Niger</option>
+                            <option>Nigeria</option>
+                            <option>North Korea</option>
+                            <option>South Africa</option>
+                            <option>South Korea</option>
+                            <option>Tanzania</option>
+                            <option>UK</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+</body>
+</html>
