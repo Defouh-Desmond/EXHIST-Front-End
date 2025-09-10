@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
       addressInputs.forEach(input => {
           clearError(input);
           if(input.value.trim() === "") {
-              showError(input, `Please fill out ${input.placeholder}.`);
+              showError(input, `Please fill out: ${input.placeholder}.`);
               valid = false;
           }
       });
