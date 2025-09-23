@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIC Restaurant Navbar</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        nav {
+            width: 100%;
+            background-color: #f36700;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Logo */
+        .logo {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* Menu */
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            transition: max-height 0.5s ease, opacity 0.5s ease;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-links li a:hover {
+            color: #ffd700;
+        }
+
+        /* Hamburger */
+        #nav-toggle {
+            display: none;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            width: 25px;
+        }
+
+        .hamburger span {
+            height: 3px;
+            width: 100%;
+            background: #fff;
+            border-radius: 3px;
+            transition: transform 0.4s ease, opacity 0.4s ease;
+            transform-origin: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 60px;
+                right: 0;
+                left: 0;
+                background-color: #f3650094;
+                flex-direction: column;
+                width: 50%;
+                height: 0;
+                overflow: hidden;
+                padding: 0 20px;
+                gap: 30px;
+                opacity: 0;
+                transition: height 0.5s ease, opacity 0.5s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            /* Menu open */
+            #nav-toggle:checked~.nav-links {
+                height: calc(100vh - 60px);
+                /* Full viewport minus navbar height */
+                opacity: 1;
+            }
+
+            /* Hamburger transform to X */
+            #nav-toggle:checked+label .span1 {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            #nav-toggle:checked+label .span2 {
+                opacity: 0;
+            }
+
+            #nav-toggle:checked+label .span3 {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">LIC Restaurant</a>
+
+            <!-- Hamburger Checkbox -->
+            <input type="checkbox" id="nav-toggle">
+            <label for="nav-toggle" class="hamburger">
+                <span class="span1"></span>
+                <span class="span2"></span>
+                <span class="span3"></span>
+            </label>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#specials">Specials</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#reservation">Reservation</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Dummy Content to Scroll
+    <div style="margin-top:80px; padding:20px;">
+        <h1>Welcome to LIC Restaurant</h1>
+        <p>Enjoy authentic Cameroonian cuisine!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec...</p>
+    </div> -->
+
+</body>
+
+</html>

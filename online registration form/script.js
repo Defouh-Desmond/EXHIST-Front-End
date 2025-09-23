@@ -101,10 +101,10 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       if(valid) {
-          // Form is valid
-          alert("Form submitted successfully!");
-          form.reset();
-          iti.setCountry("cm"); // reset phone input
+        // Form is valid
+        alert("Form submitted successfully!");
+        form.reset();
+        iti.setCountry("cm"); // reset phone input
       }
   });
 });

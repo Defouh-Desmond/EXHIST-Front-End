@@ -9,9 +9,13 @@ let lastAnswer = 0;
 /* ---------------- Factorial Function ---------------- */
 function factorial(n) {
     if (n < 0) return NaN;
-    if (n === 0 || n === 1) return 1;
-    return Array.from({ length: n }, (_, i) => i + 1).reduce((a, b) => a * b, 1);
+    let result = 1;
+    for (let i = 1; i <= n; i++) {
+        result *= i;
+    }
+    return result;
 }
+
 
 /* ---------------- Helpers ---------------- */
 function clearAll() {
@@ -59,8 +63,7 @@ function evaluateExpression() {
         // Handle factorial
         exp = exp.replace(/(\d+)!/g, "factorial($1)");
 
-        // Evaluate safely
-        let result = eval(exp);
+        
 
         if (Number.isFinite(result)) {
             resultDisplay.innerText = +result.toFixed(6);

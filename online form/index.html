@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>online registration form</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@19.2.20/build/css/intlTelInput.css" />
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.2.20/build/js/intlTelInput.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.2.20/build/js/utils.js"></script>
+</head>
+<body>
+    <section>
+        <form action="#" id="myForm">
+            <legend>Registration</legend>
+            <fieldset>
+                <!-- name -->
+                <div class="input-box">
+                    <label for="name">Full name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your full name">
+                    <div class="error"></div>
+                </div>
+
+                <!-- email -->
+                <div class="input-box">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email">
+                    <div class="error"></div>
+                </div>
+
+                <div class="flex">
+                    <!-- phone number -->
+                    <div class="input-box">
+                        <label for="phone">Phone number</label>
+                        <input type="tel" name="phone" id="phone" placeholder="Enter your phone number" maxlength="13">   
+                        <div class="error"></div>
+                    </div>
+
+                    <!-- date of birth -->
+                    <div class="input-box">
+                        <label for="dob">Date of birth</label>
+                        <input type="date" name="dob" id="dob">
+                        <div class="error"></div>
+                    </div>
+                </div>
+
+                <!-- gender -->
+                <div class="gender">
+                    <div class="input-gender">
+                        <input type="radio" name="gender" id="male">
+                        <label for="male">Male</label>
+                    </div>
+                    <div class="input-gender">
+                        <input type="radio" name="gender" id="female">
+                        <label for="female">Female</label>
+                    </div>
+                    <div class="input-gender">
+                        <input type="radio" name="gender" id="not">
+                        <label for="not">Prefer not to say</label>
+                    </div>
+
+                </div>
+                <div class="error"></div>
+
+                <!-- addresses -->
+                <!-- street1 -->
+                <div class="input-box">
+                    <input type="text" name="street" id="street1" placeholder="Enter street address">
+                    <div class="error"></div>
+                </div>
+                <!-- street2 -->
+                <div class="input-box">
+                    <input type="text" name="street2" id="street2" placeholder="Enter street address line 2">
+                    <div class="error"></div>
+                </div>
+
+                <!-- country and city -->
+                <div class="flex">
+                    <!-- country select -->
+                    <div class="input-box">
+                        <select id="country">
+                            <option>Country</option>
+                            <option></option>
+                            <option></option>
+                        </select>
+                        <div class="error"></div>
+                    </div>
+
+                    <!-- city -->
+                    <div class="input-box">
+                        <input type="text" id="city" placeholder="Enter your city">
+                        <div class="error"></div>
+                    </div>
+                </div>
+
+                <!-- region and postal code -->
+                <div class="flex">
+                    <!-- region -->
+                    <div class="input-box">
+                        <input type="text" name="region" id="region" placeholder="Enter your region">
+                        <div class="error"></div>
+                    </div>
+                    
+                    <!-- postal code -->
+                    <div class="input-box">
+                        <input type="text" name="postal" id="postal" placeholder="Enter your postal code">
+                        <div class="error"></div>
+                    </div>
+                </div>
+
+                <button>Submit</button>
+            </fieldset>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
